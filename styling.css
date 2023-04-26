@@ -50,6 +50,14 @@ h2 {
     font-size: large;
 }
 
+.box-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.inner-shadow {
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 2px 9px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
 .vcenter {
     align-items: center;
 }
@@ -100,12 +108,25 @@ h2 {
     border: none;
 }
 
+.search-submit {
+    transform: translateX(-3px);
+    padding: 6px;
+    font-size: 15px;
+    border: none;
+    background-color: var(--accent-color);
+}
+
+
 .hover-expand {
     transition: 0.2s;
     transition-timing-function: ease-in;
     transform: scale(100%);
     overflow: visible;
     cursor: pointer;
+}
+
+.hover-fill {
+    
 }
 
 .hover-expand:hover {
