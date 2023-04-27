@@ -25,6 +25,14 @@ FFFFFF */
     --font-weight-semibold: 600;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+fa-2x {
+    margin-right: 15px;
+ }
 
 /* !Text Base Styles */
 
@@ -217,6 +225,7 @@ form {
     font-size: 20px;
     overflow: hidden;
     padding: 10px;
+    padding-bottom: 5px;
     margin: 0;
     min-width: 140px;
     height: auto;
@@ -224,6 +233,9 @@ form {
     color: var(--offwhite-color);
     background-color: var(--text-color);
     border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-item:hover {
@@ -277,4 +289,29 @@ ul {
     list-style-type: none;
     margin: 0;
     color: var(--text-color);
+}
+
+.right-zoom-transition:before {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    height: 4000px;
+    width: 4000px;
+    transform: translate(50%, -50%);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: unset;
+    animation-name: right-zoom;
+    animation-iteration-count: 1;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    z-index: 100;
+}
+
+@keyframes right-zoom {
+    0% {transform: translate(50%, 25%)}
+    49% {transform: translate(-50%, -50%)}
+    51% {transform: translate(-50%, -50%)}
+    100% {transform: translate(50%, 25%)}
 }
