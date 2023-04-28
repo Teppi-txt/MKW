@@ -12,37 +12,100 @@
     <script src="https://kit.fontawesome.com/59e87e232f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="menu inner-shadow">
-        <img src="logo_64.png" class="logo hover-expand">
-        <h1 style="padding-left: 10px">Minerva Knowledge</h2>
+    <div class="box">
+        <section class="menu inner-shadow">
+            <img src="logo_64.png" class="logo hover-expand">
+            <h1 style="padding-left: 10px">Minerva Knowledge</h2>
+    
+            <form class="float-right transparent">
+                <input type="text" class="search-bar box-shadow" placeholder="Search..">
+                <button type="submit" class="search-submit hover-fill box-shadow"><i class="fa-solid fa-magnifying-glass button-icon hover-expand textcolor_secondary"></i></button>
+            </form>
+        </section>
+        <section class="nav-bar">
+            <button class="nav-item"><i class="fa-solid fa-home button-icon hover-expand textcolor_secondary"></i> Home</button>
+            <button class="nav-item"><i class="fa-solid fa-circle-info button-icon hover-expand textcolor_secondary"></i> About</button>
+            <button class="nav-item"><i class="fa-solid fa-check button-icon hover-expand textcolor_secondary"></i> Free</button>
+            <button class="nav-item" id="subjectBtn"><i class="fa-solid fa-school button-icon hover-expand textcolor_secondary"></i> Subjects</button>
+            <button class="nav-item"> <i class="fa-solid fa-folder button-icon hover-expand textcolor_secondary"></i>Collections</button>
+        </section>
+    
+        <section class="content">
+            <div class="subject-page hidden" id="subjectPage">
+                <div class="subject-display box-shadow">
+                    <h2>Group 1:</h2>
+                    <i class="fa-solid fa-book button-icon textcolor_secondary"></i>
+                    <div class="subject-list">
+                        <p>English Language and Literature</p>
+                        <p>English Literature</p>
+                    </div>
+                </div>
+                <div class="subject-display box-shadow">
+                    <h2>Group 2</h2>
+                    <i class="fa-solid fa-earth-americas button-icon textcolor_secondary"></i>
+                    <div class="subject-list">
+                        <p>Language A</p>
+                        <p>Language Ab Initio</p>
+                        <p>English B</p>
+                    </div>
+                </div>
+                <div class="subject-display box-shadow">
+                    <h2>Group 3</h2>
+                    <i class="fa-solid fa-person button-icon textcolor_secondary"></i>
+                    <div class="subject-list">
+                        <p>Business</p>
+                        <p>Economics</p>
+                        <p>Geography</p>
+                        <p>History</p>
+                        <p>Psychology</p>
+                    </div>
+                </div>
+                <div class="subject-display box-shadow">
+                    <h2>Group 4</h2>
+                    <i class="fa-solid fa-microscope button-icon textcolor_secondary"></i>
+                    <div class="subject-list">
+                        <p>Physics</p>
+                        <p>Biology</p>
+                        <p>Chemistry</p>
+                        <p>Design Technology</p>
+                        <p>Computer Science</p>
+                        <p>Sports Science</p>
+                        <p>ESS</p>
+                    </div>
+                </div>
+                <div class="subject-display box-shadow">
+                    <h2>Group 5</h2>
+                    <i class="fa-solid fa-calculator button-icon textcolor_secondary"></i>
+                    <div class="subject-list">
+                        <p>Math Application and Analysis</p>
+                        <p>Math Application and Interpretations</p>
+                    </div>
+                </div>
+                <div class="subject-display box-shadow">
+                    <h2>Group 6</h2>
+                    <i class="fa-solid fa-paintbrush button-icon textcolor_secondary"></i>
+                    <div class="subject-list">
+                        <p>Musics</p>
+                        <p>Film</p>
+                        <p>Visual Arts</p>
+                    </div>
+                </div>
+            </div>
 
-        <form class="float-right transparent">
-            <input type="text" class="search-bar box-shadow" placeholder="Search..">
-            <button type="submit" class="search-submit hover-fill box-shadow"><i class="fa-solid fa-magnifying-glass button-icon hover-expand textcolor_secondary"></i></button>
-        </form>
-    </section>
-    <section class="nav-bar">
-        <button class="nav-item"><i class="fa-solid fa-home button-icon hover-expand textcolor_secondary"></i> Home</button>
-        <button class="nav-item"><i class="fa-solid fa-circle-info button-icon hover-expand textcolor_secondary"></i> About</button>
-        <button class="nav-item"><i class="fa-solid fa-check button-icon hover-expand textcolor_secondary"></i> Free</button>
-        <button class="nav-item" id="subjectBtn"><i class="fa-solid fa-school button-icon hover-expand textcolor_secondary"></i> Subjects</button>
-        <button class="nav-item"> <i class="fa-solid fa-folder button-icon hover-expand textcolor_secondary"></i> Collections</button>
-    </section>
+        </section>
 
-    <section class="loader">
-        <h1>to be determined lol</h1>
-    </section>
-
-    <section class="footer inner-shadow">
-        <div class="flex-box-col">
-            <h2 class="bold">Contact us!</h2>
-            <ul>
-                <li>Email: s05564@ishcmc.edu.vn</li>
-                <li>Number</li>
-            </ul>
-        </div>
-        <h3 style="padding-left: 10px">1 Xuan Thuy, TP Thu Duc, Ho Chi Minh City</h3>
-    </section>
+        <section class="footer inner-shadow">
+            <div class="flex-box-col">
+                <h2 class="bold">Contact us!</h2>
+                <ul>
+                    <li>Email: s05564@ishcmc.edu.vn</li>
+                    <li>Number</li>
+                </ul>
+            </div>
+            <h3 style="padding-left: 10px">1 Xuan Thuy, TP Thu Duc, Ho Chi Minh City</h3>
+        </section>
+    </div>
+    
 
     <script src="interaction.js"></script>
 </body>

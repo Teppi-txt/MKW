@@ -30,6 +30,17 @@ body {
     height: 100vh;
 }
 
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    height: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 fa-2x {
     margin-right: 15px;
  }
@@ -269,7 +280,7 @@ form {
 }
 
 .footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -280,6 +291,8 @@ form {
     padding: 15px 25px;
     height: fit-content;
     align-items: center;
+    flex: 0 1 auto;
+    border-top: 2px var(--text-color) solid;
 
     /*idk*/
     box-sizing: border-box;
@@ -289,6 +302,11 @@ ul {
     list-style-type: none;
     margin: 0;
     color: var(--text-color);
+}
+
+.content {
+    flex: 1 1 auto;
+    overflow: hidden;
 }
 
 .right-zoom-transition:before {
@@ -304,14 +322,146 @@ ul {
     box-sizing: unset;
     animation-name: right-zoom;
     animation-iteration-count: 1;
-    animation-duration: 1.4s;
+    animation-duration: 1.8s;
     animation-timing-function: ease-in-out;
     z-index: 100;
 }
+
 
 @keyframes right-zoom {
     0% {transform: translate(50%, 25%)}
     49% {transform: translate(-50%, -50%)}
     51% {transform: translate(-50%, -50%)}
     100% {transform: translate(50%, 25%)}
+}
+
+.subject-page {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    height: calc(100%);
+    overflow: hidden;
+}
+
+.subject-display:hover {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transform: scale(105%) rotate(3deg);
+}
+
+.subject-display {
+    position: inherit;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 2rem;
+    background: var(--offwhite-color);
+    border-radius: 3px;
+    height: 200%;
+    box-sizing: border-box;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.2);
+    border-right: 4px var(--primary-color) solid;
+}
+
+
+.subject-display::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 2rem);
+    border-top: 2px #aba59fad solid;
+    border-radius: 1px;
+    top: 4.6rem;
+}
+
+.subject-display > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600/300;
+}
+  
+.subject-display > h2 {
+    margin-top: 1rem;
+    position: absolute;
+    top: 1.5rem;
+    transform: translateX(1rem);
+    font-weight: normal;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+
+.subject-display > i {
+    position: absolute;
+    top: 1.3rem;
+    background-color: var(--offwhite-color);
+    right: 1.3rem;
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+  
+.subject-display > p {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-color);
+    text-align: center;
+}
+  
+.subject-list {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    margin-top: 40px;
+    top: 2.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100% - 4rem);
+    box-sizing: border-box;
+}
+
+.subject-list p {
+    padding: 0;
+    margin: 0;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 2rem);
+}
+
+.subject-list p::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    transform: translate(-1rem, calc(7px));
+    
+}
+
+
+.subject-list p:hover {
+    color: var(--accent-color);
+    transform: translateX(15px);
+    transition-duration: 0.5s;
+}
+
+.subject-list p:hover::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 1px;
+    background-color: transparent;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid var(--accent-color);
+    transform: translate(-1rem, calc(4px));
 }
