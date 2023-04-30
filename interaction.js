@@ -3,21 +3,9 @@ var bodyChildren = document.body.children;
 
 var currentPage = "main";
 
-var download_button_interactive = $("#download-button-feature");
-download_button_interactive.on("click", function () {
-    download_button_interactive.removeClass("unchecked");
-    download_button_interactive.children().each(function () {
-        this.classList.add("transparent");
-    });
-
-    setTimeout(() => {
-        $("#check").removeClass("transparent");
-    }, 150);
-    console.log(0);
-})
-
 function loadPage(tab) {
     let page = tab.getAttribute("page");
+    
     document.body.classList.add("right-zoom-transition");
     
     setTimeout(() => {
@@ -42,7 +30,7 @@ function loadPage(tab) {
     setTimeout(() => {
         //whatever
         document.body.classList.remove("right-zoom-transition");
-    }, 1800);
+    }, 1600);
 }
 
 console.log(navItems);

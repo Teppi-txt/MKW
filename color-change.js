@@ -10,7 +10,6 @@ function changeColor(lengthMs) {
     $("#color-display").html(colorSchemes[counter]);
 
     counter++;
-    console.log(1);
     setTimeout(() => {
         //whatever
         changeColor(lengthMs)

@@ -594,11 +594,8 @@ ul {
     border-right: 4px var(--primary-color) solid;
     flex-shrink: 0;
     align-items: center;
-}
 
-.main-page .feature-display,
-.main-page .feature-display * {
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-in;
 }
 
@@ -613,6 +610,15 @@ ul {
     right: 0;
 
     transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.main-page .feature-display h2,
+.main-page .feature-display h1 {
+    transition-duration: 0.3s;
     transition-timing-function: ease-in;
 }
 
