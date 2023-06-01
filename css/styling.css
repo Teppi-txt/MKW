@@ -16,7 +16,7 @@ FFFFFF */
 :root {
     --primary-color: #746454;
     --accent-color: #a48c5f;
-    --offwhite-color: #dbd6c9;
+    --offwhite-color: #eee7d7;
     --text-color: #746454;;
 
     --font-main: "Times New Roman", sans-serif;
@@ -41,6 +41,10 @@ body {
 
 .hidden {
     visibility: hidden;
+}
+
+.centered {
+    align-self: center;
 }
 
 .transparent {
@@ -446,8 +450,7 @@ ul {
     transform: translateX(12rem);
 }
 
-.subject-display:hover > h2 {
-    font-weight: 700;
+.subject-display:hover h2 {
 
     transition-duration: 0.4s;
     transition-timing-function: ease-out;
@@ -556,14 +559,14 @@ ul {
     align-items: center;
 }
 
-.main-page .flavour-text {
+.quote {
     font-size: 40px;
     padding: 20px;
     margin: 40px;
     overflow: visible;
 }
 
-.main-page .flavour-text:before {
+.quote:before {
   position: absolute;
   font-family: 'FontAwesome';
   top: -20px;
@@ -731,11 +734,11 @@ div.cardfan img:last-child:hover {
 
 .download-button {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    top: calc((100% - 125px)/4 + 35px);
+    top: calc((100% - 125px)/4 + 45px);
     display: flex;
     justify-content: center;
 
@@ -744,10 +747,10 @@ div.cardfan img:last-child:hover {
 
 .download-button * {
     transition-timing-function: ease-in;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
 }
 
-.download-button.unchecked:hover {
+.download-button:not(.done):hover {
     background-color: var(--accent-color);
     cursor: pointer;
 }
@@ -761,7 +764,7 @@ div.cardfan img:last-child:hover {
     pointer-events: none;
     top: calc(50% - 75px);
 
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
 }
 
 .download-icon {
@@ -772,14 +775,45 @@ div.cardfan img:last-child:hover {
     pointer-events: none;
     top: 20%;
 
-    transition-duration: 0.5s;
+    transition-duration: 0.52;
 }
 
-.download-button:not(.unchecked) {
+.download-button.done {
     background-color: rgb(75, 134, 75);
+    animation: rubberBand .8s
 }
 
-.download-button.unchecked:hover .download-icon {
+.download-button.done .download-check {
+    transform: scale(1);
+    transition: all .2s ease;
+    transition-delay: .2s;
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scale(1, 1, 1)
+    }
+    30% {
+        transform: scale3d(1.15, 0.75, 1)
+    }
+    40% {
+        transform: scale3d(0.75, 1.15, 1)
+    }
+    50% {
+        transform: scale3d(1.10, 0.85, 1)
+    }
+    65% {
+        transform: scale3d(.95, 1.05, 1)
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1)
+    }
+    100% {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.download-button:not(.done):hover .download-icon {
     animation-name: bob;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -791,7 +825,7 @@ div.cardfan img:last-child:hover {
     width: 100px;
     height: 20px;
     border: 15px var(--offwhite-color) solid;
-    bottom: 30%;
+    bottom: 25%;
     border-top: none;
     pointer-events: none;
 
@@ -837,7 +871,7 @@ div.cardfan img:last-child:hover {
     flex-direction: column;
     width: min-content;
     flex-grow: 0;
-    max-width: 30%;
+    max-width: 40%;
 }
 
 .about-page h1 {
@@ -863,3 +897,23 @@ div.cardfan img:last-child:hover {
     flex-shrink: 0;
     overflow: wrap;
 }
+
+.about-text ul {
+    list-style-type: circle;
+    padding: 0rem;
+    transform: translateX(2rem);
+    overflow: visible;
+}
+
+.about-text ul li {
+    display: list-item;
+    list-style-type: circle;
+}
+
+.about-text ul li::before {
+    content: '✔';
+    font-size: 15px;
+    color: var(--primary-color);
+    line-height: 1.7;
+    padding-right: 10px;
+  }

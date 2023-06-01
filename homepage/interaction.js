@@ -36,9 +36,30 @@ function loadPage(tab) {
 console.log(navItems);
 
 
+//tabs at the top
 Array.from(navItems).forEach((element, index) => {
     element.onclick = function() {
         loadPage(element);
         console.log(0);
     }
+});
+
+
+//tabs at the top
+Array.from(navItems).forEach((element, index) => {
+    element.onclick = function() {
+        loadPage(element);
+        console.log(0);
+    }
+});
+
+var subjectLists = document.querySelectorAll('.subject-list');
+//detect when subjects are clicked
+Array.from(subjectLists).forEach((element, index) => {
+    Array.from(element.childNodes).forEach((element, index) => {
+        element.onclick = function() {
+            localStorage.setItem("current-subject", element.innerHTML);
+            window.location.href = "/subjectpage/subjectpage.html";
+        }
+    });
 });
