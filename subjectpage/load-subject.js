@@ -1,6 +1,6 @@
 var subject_template_data = {
     englishlanguageandliterature : [
-        ["10 Point Plan", "A template to design an Individual Oral 10 point plan used during presentation"],
+        ["10 Point Plan", "A template to design a 10 point plan for the Individual Oral in english, including the global issue, field of inquiry, and individual points."],
         ["Text", "test file since there are not enough"]
     ],
     englishliterature : [
@@ -23,5 +23,5 @@ for (let template = 0; template < subject_data.length; template++) {
 }
 
 function createTemplateHTML(id, name, description, subject) {
-    return '<div class="file-display">\n<h1>' + name + '</h1>\n<p class="description">' + description + '</p>\n<a class="download-file" href="/templates/' + subject + '/' + id + '.png" download>\n<i class="fa fa-download"></i>\n<p>Download Template</p>\n</a>\n</div>';
+    return '<div class="file-display">\n<h1>' + name + '</h1>\n<p class="description">' + description + '</p>\n<a class="download-file" href="/templates/' + subject + '/' + (id + 1) + '.png" download>\n<i class="fa fa-download"></i>\n<p>Download Template</p>\n</a>\n</div>';
 }
