@@ -11,6 +11,10 @@
     --font-weight-semibold: 600;
 }
 
+.content {
+    overflow: scroll;
+}
+
 .quote {
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -25,9 +29,10 @@
 
 .file-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
     padding: 50px 15%;
+    overflow: scroll;
 }
 
 .file-display {
@@ -43,12 +48,13 @@
     flex-shrink: 0;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
-    height: 250px;
+    height: 220px;
+    align-items: center;
 }
 
 .file-display h1 {
     align-self: left;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     border-bottom: 2px #c3bcaf solid;
 }
 
@@ -63,8 +69,9 @@
     align-items: center;
     bottom: 30px;
     height: 30px;
-    width: 80%;
     padding: 0px 15px;
+    width: 80%;
+    margin: 0 auto;
     background-color: var(--primary-color);
     transition: 0.2s ease-in-out;
     cursor: pointer;
@@ -96,4 +103,21 @@
 .file-display .download-file {
     text-decoration: none;
 }
-  
+
+.empty-page {
+    background-color: var(--offwhite-color);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.empty-page h1 {
+    font-size: 64px;
+    text-shadow: 2px 2px 0 var(--white-color);
+}
+
+.empty-page h3 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--accent-color);
+}

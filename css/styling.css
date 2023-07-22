@@ -555,8 +555,21 @@ ul {
     padding: 2rem;
     width: 100%;
     height: calc(100%);
-    overflow: scroll;
+    overflow-y: scroll;
     align-items: center;
+}
+
+.main-page svg {
+    position: absolute;
+    z-index: -1;
+    transform: translate(40vw, 20vh);
+}
+
+.main-page path{
+    stroke-dasharray: 31;
+    stroke-dashoffset: 0;
+    stroke: var(--accent-color);
+    stroke-width: 0.1;
 }
 
 .quote {
@@ -584,14 +597,15 @@ ul {
 }
 
 .main-page .feature-display {
+    overflow: visible;
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem 2rem 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 10%;
     background: var(--offwhite-color);
     border-radius: 3px;
-    height: 70%;
-    width: 50%;
+    height: 80%;
+    width: 80%;
     box-sizing: border-box;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.2);
     border-right: 4px var(--primary-color) solid;
@@ -617,6 +631,18 @@ ul {
 
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
+}
+
+.main-page .feature-display::after {
+    position: absolute;
+    content: "";
+    top:8%;
+    left: -100%;
+    width: 200vw;
+    height: 180px;
+    background-color: var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    z-index: -1;
 }
 
 .main-page .feature-display h2,
@@ -663,13 +689,6 @@ ul {
 .main-page .feature-display.blue::before {
     border-top: 2px #98C1D9 solid;
 }
-
-
-
-
-
-
-
 
 .main-page .feature-display .color-display {
     position: absolute;
@@ -733,12 +752,13 @@ div.cardfan img:last-child:hover {
 }
 
 .download-button {
-    position: absolute;
-    width: 220px;
-    height: 220px;
+    position: relative;
+    margin-top: 6%;
+    width: 240px;
+    height: 240px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--primary-color);
-    top: calc((100% - 125px)/4 + 45px);
     display: flex;
     justify-content: center;
 
