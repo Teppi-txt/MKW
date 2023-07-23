@@ -59,7 +59,7 @@ Array.from(subjectLists).forEach((element, index) => {
     Array.from(element.childNodes).forEach((element, index) => {
         element.onclick = function() {
             localStorage.setItem("current-subject", element.innerHTML);
-            window.location.href = "/subjectpage/subjectpage.html";
+            window.location.href = "MKW/subjectpage/subjectpage.html";
         }
     });
 });
