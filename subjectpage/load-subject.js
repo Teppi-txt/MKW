@@ -66,5 +66,5 @@ function createBlankHTML() {
 }
 
 function createTemplateHTML(id, name, description, subject) {
-    return '<div class="file-display">\n<h1>' + name + '</h1>\n<p class="description">' + description + '</p>\n<a class="download-file" href="/templates/' + subject + '/' + (id + 1) + '.png" download>\n<i class="fa fa-download"></i>\n<p>Download Template</p>\n</a>\n</div>';
+    return '<div class="file-display">\n<h1>' + name + '</h1>\n<p class="description">' + description + '</p>\n<a class="download-file" href="../templates/' + subject + '/' + (id + 1) + '.png" download>\n<i class="fa fa-download"></i>\n<p>Download Template</p>\n</a>\n</div>';
 }
